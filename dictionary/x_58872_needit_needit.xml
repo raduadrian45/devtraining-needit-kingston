@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Human Resources" sequence="0" value="hr"/>
+                <element label="Facilities" sequence="1" value="facilities"/>
+                <element label="Legal" sequence="2" value="legal"/>
+                <element label="IT" sequence="3" value="it"/>
+                <element label="Finance" sequence="4" value="finance"/>
+                <element label="AP" sequence="5" value="ap"/>
+                <element label="AR" sequence="6" value="ar"/>
+                <element label="Audit" sequence="7" value="audit"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="Human Resources 1" sequence="0" value="hr1"/>
+                <element label="Human Resources 2" sequence="1" value="hr2"/>
+                <element label="Facilities 1" sequence="2" value="facilities1"/>
+                <element label="Facilities 2" sequence="3" value="facilities2"/>
+                <element label="Legal 1" sequence="4" value="legal1"/>
+                <element label="Legal 2" sequence="5" value="legal2"/>
+                <element label="IT 1" sequence="6" value="it1"/>
+                <element label="IT 2" sequence="7" value="it2"/>
+                <element label="Finance 1" sequence="8" value="finance1"/>
+                <element label="Finance 2" sequence="9" value="finance2"/>
+                <element label="AP 1" sequence="10" value="ap1"/>
+                <element label="AP 2" sequence="11" value="ap2"/>
+                <element label="AR 1" sequence="12" value="ar1"/>
+                <element label="AR 2" sequence="13" value="ar2"/>
+                <element label="Audit 1" sequence="14" value="audit1"/>
+                <element label="Audit 2" sequence="15" value="audit2"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
